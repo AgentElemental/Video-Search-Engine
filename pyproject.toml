@@ -1,0 +1,18 @@
+[project]
+name = "video-search-engine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "fastapi>=0.135.2",
+    "opencv-python>=4.13.0.92",
+    "pillow>=12.1.1",
+    "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.22",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "transformers>=5.3.0",
+    "uvicorn>=0.42.0",
+]
