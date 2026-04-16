@@ -75,6 +75,10 @@ The `hf_cache` directory stores pre-downloaded model files from Hugging Face (su
      unzip hf_cache.zip
      ```
 
+**Or download the ready-made cache:**
+
+- [Download hf_cache.zip from Google Drive](https://drive.google.com/file/d/11CjXkOhvyyPq0JV568EIMs7duc141OvK/view?usp=sharing)
+
 This ensures all model files are available locally and avoids repeated downloads.
 
 
