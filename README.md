@@ -32,6 +32,52 @@ pip install -r requirements.txt
 
 ---
 
+## Creating and Uploading the `hf_cache` Directory
+
+The `hf_cache` directory stores pre-downloaded model files from Hugging Face (such as CLIP weights and tokenizers). This cache allows the app to run offline and speeds up model loading.
+
+### How to Create `hf_cache`
+
+1. **Automatic creation:**
+   - The cache is created automatically the first time you run the app or any script that loads the CLIP model (see `app/embeddings.py`).
+   - To trigger cache creation, simply run:
+
+     ```bash
+     python main.py
+     ```
+   - The required model files will be downloaded into `hf_cache` if not already present.
+
+2. **Manual creation (optional):**
+   - You can also run a minimal script to pre-download the model:
+
+     ```python
+     from transformers import CLIPModel, CLIPProcessor
+     CLIPModel.from_pretrained("openai/clip-vit-base-patch16", cache_dir="./hf_cache")
+     CLIPProcessor.from_pretrained("openai/clip-vit-base-patch16", cache_dir="./hf_cache")
+     ```
+
+### How to Upload or Share `hf_cache`
+
+1. **Compress the directory:**
+   - Zip the `hf_cache` folder:
+
+     ```bash
+     zip -r hf_cache.zip hf_cache
+     ```
+
+2. **Upload or transfer:**
+   - Share the `hf_cache.zip` file via your preferred method (cloud storage, USB, etc.).
+
+3. **Extract on target machine:**
+   - Unzip in the project root so the structure is preserved:
+
+     ```bash
+     unzip hf_cache.zip
+     ```
+
+This ensures all model files are available locally and avoids repeated downloads.
+
+
 ## How to Run
 
 1. **Start the server:**
