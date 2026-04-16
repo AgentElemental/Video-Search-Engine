@@ -82,6 +82,45 @@ The `hf_cache` directory stores pre-downloaded model files from Hugging Face (su
 This ensures all model files are available locally and avoids repeated downloads.
 
 
+## Using the Prebuilt `.venv` Folder
+
+The `.venv` folder contains a pre-configured Python virtual environment with all required dependencies installed. This can save time and avoid compatibility issues.
+
+### How to Use the Prebuilt `.venv`
+
+1. **Download the environment:**
+    - [Download .venv.zip from Google Drive](https://drive.google.com/file/d/1-M3PZVY8ERcGrwOGm8S0jiEL-_Fr3KU5/view?usp=sharing)
+
+2. **Extract in the project root:**
+    - Unzip the `.venv.zip` file in the root of your project (so that `.venv/` appears alongside `main.py`, `app/`, etc.):
+
+       ```bash
+       unzip .venv.zip
+       ```
+
+3. **Activate the environment:**
+    - On **Windows (PowerShell):**
+
+       ```powershell
+       .venv\Scripts\Activate.ps1
+       ```
+    - On **Windows (cmd):**
+
+       ```cmd
+       .venv\Scripts\activate.bat
+       ```
+    - On **Linux/macOS:**
+
+       ```bash
+       source .venv/bin/activate
+       ```
+
+4. **Ready to use:**
+    - Your environment is now set up with all dependencies. You can run the app as described below.
+
+**Note:** If you encounter issues, you can always recreate the environment manually using `pip install -r requirements.txt`.
+
+
 ## How to Run
 
 1. **Start the server:**
